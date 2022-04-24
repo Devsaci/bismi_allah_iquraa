@@ -1,3 +1,5 @@
+import 'package:bismi_allah_iquraa/constants/constants.dart';
+import 'package:bismi_allah_iquraa/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,37 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'BISMI ALLAH IQRAE',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Constants.kSwatchColor,
+        fontFamily: 'Poppins'
       ),
-      home:  MyHomePage(),
+      home:  SplashScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
 
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("BISMI ALLAH IQRAE"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'BISMI ALLAH IQRAE',
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
