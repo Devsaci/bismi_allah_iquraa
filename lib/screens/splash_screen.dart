@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -13,8 +14,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    Timer(
+      Duration(seconds: 2),
+          () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => Text("Onboarding"))),);
   }
 
   @override
