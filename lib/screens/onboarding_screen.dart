@@ -1,5 +1,6 @@
-
+import 'package:bismi_allah_iquraa/constants/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:introduction_screen/introduction_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -11,10 +12,31 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
-      body: Center(
-        child: Text("On Board"),
+      body: IntroductionScreen(
+        pages: [],
+        onDone: () {
+          // When done button is press
+        },
+        // onSkip: () {
+        //   // You can also override onSkip callback
+        // },
+        // showBackButton: false,
+        // showSkipButton: true,
+        showNextButton: true,
+        skip: const Icon(Icons.arrow_forward, color: Colors.black),
+        // skip:  const Icon(Icons.skip_next),
+        // next:  const Icon(Icons.next_plan),
+        done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black)),
+        dotsDecorator: DotsDecorator(
+            size: const Size.square(10.0),
+            activeSize: const Size(20.0, 10.0),
+            // activeColor: theme.accentColor,
+            color: Constants.kPrimary,
+            spacing: const EdgeInsets.symmetric(horizontal: 3.0),
+            activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25.0))),
       ),
     ));
   }
