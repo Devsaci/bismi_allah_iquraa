@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:bismi_allah_iquraa/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,15 +12,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
     Timer(
       Duration(seconds: 2),
-          () => Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => Text("Onboarding"))),);
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const OnBoardingScreen(),
+        ),
+      ),
+    );
   }
 
   @override
