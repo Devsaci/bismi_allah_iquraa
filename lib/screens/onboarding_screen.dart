@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:bismi_allah_iquraa/constants/constants.dart';
+import 'package:bismi_allah_iquraa/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -21,7 +22,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         onDone: () {
           Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) =>  Text("HomeScreen")));
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(),
+              ));
         },
         // onSkip: () {
         //   // You can also override onSkip callback
