@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:bismi_allah_iquraa/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -17,7 +19,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: IntroductionScreen(
         pages: [],
         onDone: () {
-          // When done button is press
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) =>  Text("HomeScreen")));
         },
         // onSkip: () {
         //   // You can also override onSkip callback
@@ -28,7 +32,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         skip: const Icon(Icons.arrow_forward, color: Colors.black),
         // skip:  const Icon(Icons.skip_next),
         // next:  const Icon(Icons.next_plan),
-        done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black)),
+        done: const Text("Done",
+            style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black)),
         dotsDecorator: DotsDecorator(
             size: const Size.square(10.0),
             activeSize: const Size(20.0, 10.0),
