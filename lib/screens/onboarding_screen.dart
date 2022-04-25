@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:bismi_allah_iquraa/constants/constants.dart';
 import 'package:bismi_allah_iquraa/screens/home_screen.dart';
@@ -18,7 +17,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return SafeArea(
         child: Scaffold(
       body: IntroductionScreen(
-        pages: [],
+        pages: [
+
+        ],
         onDone: () {
           Navigator.pushReplacement(
               context,
