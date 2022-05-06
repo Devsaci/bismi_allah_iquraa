@@ -40,6 +40,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
           ),
+          PageViewModel(
+            title: "Prayer Alerts",
+            bodyWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Choose your adhan , which prayer to be notified of and how often. ",
+                    textAlign: TextAlign.center,style: TextStyle(fontSize: 16),),
+                ),
+              ],
+            ),
+            image: Center(child: Image.asset('assets/prayer.png',)),
+          ),
         ],
         onDone: () {
           Navigator.pushReplacement(
