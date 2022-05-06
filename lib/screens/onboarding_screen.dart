@@ -55,6 +55,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
             image: Center(child: Image.asset('assets/prayer.png',)),
           ),
+          PageViewModel(
+            title: "Build Better Habits",
+            bodyWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Make Islamic practices a part of your daily life in a way that best suits your life  "
+                    ,textAlign: TextAlign.center,style: TextStyle(fontSize: 16),),
+                ),
+              ],
+            ),
+            image: Center(child: Image.asset('assets/zakat.png')),
+          ),
         ],
         onDone: () {
           Navigator.pushReplacement(
