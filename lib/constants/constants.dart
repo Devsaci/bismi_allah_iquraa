@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class Constants {
   static const kPrimary = Color(0xff8a51d1);

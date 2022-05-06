@@ -16,11 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 1),
-      () => Navigator.pushReplacement(
+       Duration(seconds: 1), () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const OnBoardingScreen(),
+          builder: (context) =>  OnBoardingScreen(),
         ),
       ),
     );
@@ -32,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Scaffold(
         body: Stack(
           children: [
-            Center(
+             Center(
               child: Text(
                 "BISMI ALLAH IQRAE",
                 style: TextStyle(

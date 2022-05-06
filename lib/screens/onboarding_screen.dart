@@ -1,4 +1,3 @@
-
 import 'package:bismi_allah_iquraa/constants/constants.dart';
 import 'package:bismi_allah_iquraa/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +17,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         child: Scaffold(
       body: IntroductionScreen(
         pages: [
+          PageViewModel(
+            title: "Read Quran",
+            bodyWidget: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children:  [
+                Text("Click on "),
+
+              ],
+            ),
+            image: Center(child: Image.asset('assets/quran.png',fit: BoxFit.fitWidth,)),
+          ),
 
         ],
+
+
         onDone: () {
           Navigator.pushReplacement(
               context,
@@ -32,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         // },
         // showBackButton: false,
         // showSkipButton: true,
-        showNextButton: true,
+        showNextButton: false,
         skip: const Icon(Icons.arrow_forward, color: Colors.black),
         // skip:  const Icon(Icons.skip_next),
         // next:  const Icon(Icons.next_plan),
