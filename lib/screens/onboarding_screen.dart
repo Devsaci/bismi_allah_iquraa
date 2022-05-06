@@ -19,19 +19,28 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         pages: [
           PageViewModel(
             title: "Read Quran",
-            bodyWidget: Row(
+            bodyWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Text("Click on "),
-
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Customize your reading view, read in multiple language, listen different audio ",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
               ],
             ),
-            image: Center(child: Image.asset('assets/quran.png',fit: BoxFit.fitWidth,)),
+            image: Center(
+              child: Image.asset(
+                'assets/quran.png',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ),
-
         ],
-
-
         onDone: () {
           Navigator.pushReplacement(
               context,
@@ -39,15 +48,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 builder: (context) => HomeScreen(),
               ));
         },
-        // onSkip: () {
-        //   // You can also override onSkip callback
-        // },
-        // showBackButton: false,
-        // showSkipButton: true,
         showNextButton: false,
         skip: const Icon(Icons.arrow_forward, color: Colors.black),
-        // skip:  const Icon(Icons.skip_next),
-        // next:  const Icon(Icons.next_plan),
         done: const Text("Done",
             style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black)),
         dotsDecorator: DotsDecorator(
